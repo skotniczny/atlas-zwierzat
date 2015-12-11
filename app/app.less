@@ -1,10 +1,19 @@
+// @base-color: rgb(205, 96, 144);
+// @hover-color: purple;
+
+@base-color: rgb(59,134,134);
+@hover-color: rgb(121,189,154);
+@dark-color: rgb(11,72,107);
+
 body {
   font-family: 'Lora', 'Georgia', serif;
 }
+
 .main,
 .inner {
   width: 100%;
 }
+
 section,
 .article,
 .site-title,
@@ -12,68 +21,84 @@ section,
   margin-left: 4%;
   margin-right: 4%;
 }
+
 /** Headings **/
 h1,
-h2 {
+h2, {
   font-weight: 400;
 }
+
 /** Links **/
 a {
-  color: #3b8686;
+  color: @base-color;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 a:visited {
-  color: #0b486b;
+  color: @dark-color;
 }
+
 a:focus {
-  outline: 2px dotted #79bd9a;
+  outline: 2px dotted @hover-color;
 }
+
 /** Header **/
 .site-title a,
 .article-title a {
   color: #222;
   text-decoration: none;
 }
+
 .site-title a:hover,
 .article-title a:hover {
   color: #666;
 }
+
 /** Navigation **/
 .inline-items {
   padding: 0;
 }
+
 .inline-items li {
   display: inline-block;
   list-style: none;
 }
+
 .menu-item a {
   display: block;
   padding: 15px 25px;
   text-decoration: none;
   text-transform: capitalize;
 }
+
 .menu-item a:hover {
-  background-color: #79bd9a;
+  background-color: @hover-color;
   color: #fff;
 }
+
 .active a {
-  background-color: #3b8686;
+  background-color: @base-color;
   color: #fff;
 }
+
 .active a:hover {
-  background-color: #79bd9a;
+  background-color: @hover-color;
   color: #fff;
 }
+
 .page-nav {
   border-color: #ddd;
   border-style: solid;
   border-width: 1px 0;
 }
+
 .page-nav .inline-items li {
   display: block;
 }
+
 .search {
   box-sizing: border-box;
   max-width: 290px;
@@ -81,15 +106,18 @@ a:focus {
   padding-left: 25px;
   position: relative;
 }
+
 .search .fa {
   position: absolute;
   right: 8px;
   top: 10px;
 }
+
 /** Main Gallery **/
 .gallery {
   padding: 1em 0;
 }
+
 .gallery dl {
   /*display: inline-block;*/
   float: left;
@@ -100,14 +128,17 @@ a:focus {
   position: relative;
   width: 100%;
 }
+
 .gallery dt {
   background: #0d0d0d;
   height: 100%;
   width: 100%;
 }
+
 .gallery dt img {
   width: 100%;
 }
+
 .gallery dl dd {
   bottom: 0;
   left: 0;
@@ -115,6 +146,7 @@ a:focus {
   position: absolute;
   width: 100%;
 }
+
 .gallery dl dd a {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.7);
@@ -127,41 +159,47 @@ a:focus {
   text-transform: capitalize;
   width: 100%;
 }
+
 .gallery dl dt a:focus {
   opacity: 0.85;
   outline: none;
 }
+
 .gallery dl dd a:focus {
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2) inset;
-  opacity: 1;
+  opacity:  1;
 }
+
 /** Site Index**/
 .site-index dt {
   font-size: 1.17em;
 }
+
 /** Article **/
-.short-desc,
-.long-desc {
+.short-desc, .long-desc {
   padding: 0 5%;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
+
 .short-desc {
   border-color: #ddd;
   border-style: solid;
   border-width: 1px 0;
 }
+
 .long-desc {
   background-color: lightblue;
   border: 2px dashed #fff;
   margin: 1em 0;
 }
-.short-desc dt,
-.long-desc dt {
+
+.short-desc dt, .long-desc dt {
   font-weight: 700;
 }
+
 .article figure {
   border-color: #ddd;
   border-style: solid;
@@ -170,34 +208,41 @@ a:focus {
   padding: 1em 0 0;
   text-align: center;
 }
+
 .article figure img {
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
   max-width: 100%;
 }
+
 .article figcaption {
   font-style: italic;
 }
+
 /** Bottom Navigation **/
 .bottom-nav-container {
-  background-color: #0b486b;
+  background-color: @dark-color;
 }
+
 .bottom-nav {
   color: #fff;
   margin: 0;
   padding: 0 0 1em;
   text-align: center;
 }
+
 .bottom-nav > li {
   margin-top: .5em;
 }
+
 .bottom-nav ul {
   margin: 1em 0;
   padding: 0;
 }
+
 .bottom-nav .label a {
   font-size: 16px;
-  background-color: #3b8686;
+  background-color: @base-color;
   color: #fff;
   display: inline-block;
   margin: 4px 8px;
@@ -206,9 +251,10 @@ a:focus {
   text-decoration: none;
   white-space: nowrap;
 }
+
 .bottom-nav .label a::before {
   border-bottom: 14px solid transparent;
-  border-right: 8px solid #3b8686;
+  border-right: 8px solid @base-color;
   border-top: 14px solid transparent;
   content: "";
   height: 0;
@@ -217,6 +263,7 @@ a:focus {
   top: 0;
   width: 0;
 }
+
 .bottom-nav .label a::after {
   background-color: #fff;
   border-radius: 50%;
@@ -227,31 +274,37 @@ a:focus {
   top: 13px;
   width: 4px;
 }
+
 .bottom-nav .label a:hover {
-  background: #79bd9a;
+  background: @hover-color;
   color: #fff;
 }
 .bottom-nav .label a:hover::before {
-  border-right-color: #79bd9a;
+  border-right-color: @hover-color;
 }
+
 /** Footers **/
 footer {
   color: #666;
   font-size: 0.9em;
   padding: 1em 0;
 }
+
 footer .inline-items {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 footer .left {
   width: 70%;
 }
+
 footer .right {
   float: right;
   text-align: right;
   width: 30%;
 }
+
 /** Froms **/
 button,
 input {
@@ -261,8 +314,9 @@ input {
   font-size: .8em;
   line-height: 1.5;
 }
+
 button {
-  background: #3b8686;
+  background: @base-color;
   border: 0;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
   color: #fff;
@@ -271,178 +325,224 @@ button {
   padding: 5px 8px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
+
 input[type="search"] {
   box-sizing: border-box;
   padding: 8px 26px 8px 6px;
   width: 100%;
 }
+
 button:active {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.125) inset;
 }
+
 button:hover {
-  background: #79bd9a;
+  background: @hover-color;
 }
+
 input:focus {
   outline: 0;
-  border: 1px solid #3b8686;
+  border: 1px solid @base-color;
 }
+
 button .fa {
   font-size: 1.25em;
 }
+
 label {
   cursor: pointer;
 }
+
 @media screen and (min-width: 600px) {
   /** Header **/
   .site-title {
-    text-align: center;
+    text-align: center;  
   }
+
   .article-title em {
     white-space: nowrap;
   }
+
   /** Navigation **/
   .page-nav {
     margin: 0 4%;
     position: relative;
   }
+
   .page-nav ul {
     margin: 0;
   }
+
   .page-nav .inline-items li {
     display: inline-block;
   }
+
   .search {
     float: right;
     padding-left: 0;
   }
+
   /** Gallery **/
   .gallery {
     margin-left: 4%;
     margin-right: 4%;
   }
+
   .gallery dl {
     border-radius: 3px;
     margin: .3%;
     width: 49.6%;
   }
+
   .gallery dl:nth-child(even) {
     margin-right: 0;
   }
+
   .gallery dl:nth-child(odd) {
     margin-left: 0;
   }
+
   /** Article **/
   .article {
     margin: 0 8%;
   }
 }
+
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
   }
+
   .main,
   .inner {
     margin: 0 auto;
     max-width: 1020px;
   }
+
   /** Navigation **/
   .page-nav {
     margin: 0;
   }
+
   .page-nav ul {
     margin: 0 4%;
   }
+
   .search {
     margin-top: 8px;
   }
+
   /** Gallery **/
   .gallery dl {
     margin: .3%;
     width: 32.9%;
   }
+
   .gallery dl:nth-child(even) {
     margin-right: .3%;
   }
+
   .gallery dl:nth-child(odd) {
     margin-left: .3%;
   }
+
   .gallery dl:nth-child(3n+0) {
     margin-right: 0;
   }
+
   .gallery dl:nth-child(3n+1) {
     margin-left: 0;
   }
+
   .gallery dl dd a {
     opacity: 0;
   }
+
   .gallery dl:hover dd a {
     opacity: 1;
   }
+
   /** Bottom Navigation **/
   .bottom-nav > li {
     vertical-align: top;
     width: 33%;
   }
+
   .bottom-nav .label a {
     font-size: 18px;
   }
+
   .bottom-nav .label a::before {
     border-bottom: 16px solid transparent;
     border-top: 16px solid transparent;
   }
+
   .bottom-nav .label a::after {
     top: 14px;
   }
 }
+
 /** Print Style **/
 @media print {
   body {
     font-size: 11pt;
     margin: 15mm 15mm 15mm 15mm;
   }
+
   a {
     text-decoration: none;
   }
+
   footer,
   .page-nav,
   .bottom-nav-container,
   .site-index > ul {
     display: none;
   }
+
   /** Header **/
   .site-title {
     text-align: center;
   }
+
   .site-title,
   .article-title {
     border-bottom: 1px solid #ccc;
   }
+
   .article-title em {
     white-space: nowrap;
   }
+
   /** Gallery **/
   .gallery {
     text-align: center;
   }
+
   .gallery dl {
     float: none;
     height: auto;
     width: 100%;
   }
+
   .gallery dl dt {
     margin: 0 auto;
     width: 60%;
   }
+
   .gallery dl dd {
     position: static;
   }
+
   .gallery dl dd a {
     opacity: 1;
   }
+
   /** Article **/
   .article dt {
     font-weight: 700;
   }
+
   .article dd {
     margin-left: 0;
   }
@@ -450,25 +550,31 @@ label {
   .article dd {
     display: inline;
   }
+
   .article dd::before {
     content: "\2014  ";
   }
+
   .article dd p {
     margin: 0;
     text-indent: 1em;
   }
+
   .article dd p:first-child {
     display: inline;
   }
+
   .short-desc,
   .long-desc {
     padding: 0;
     border: none;
     text-align: justify;
   }
+
   .article figure {
     border: none;
   }
+  
   .article figure img {
     border-radius: 0;
   }

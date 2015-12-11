@@ -1,0 +1,27 @@
+<header class="site-header">
+  <h1 class="site-title"><a href="#/">Atlas Zwierząt Polski</a></h1>
+
+  <nav class="page-nav">
+    <ul class="inline-items">
+      <li class="menu-item active"><a href="#/">główna</a></li>
+      <li class="menu-item"><a href="#/classes">gromady</a></li>
+      <li class="menu-item"><a href="#/site-index">skorowidz</a></li>
+      <li class="search">
+        <input id="s" type="search" placeholder="Wyszukaj" ng-model="query"> <label for="s"><i class="fa fa-search"></i></label>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="gallery clearfix">
+  <dl ng-repeat="animal in animals | filter:query">
+    <dt>
+      <a href="#/animals/{{animal.id}}">
+        <img ng-src="img/animals/{{animal.img}}" alt="{{animal.name}}">
+      </a>
+    </dt>
+    <dd>
+      <a href="#/animals/{{animal.id}}">{{animal.name}}</a>
+    </dd>
+  </dl>
+</div>

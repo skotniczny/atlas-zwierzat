@@ -77,7 +77,7 @@ a:focus {
 .search {
   box-sizing: border-box;
   max-width: 290px;
-  margin-top: 7px;
+  margin-top: 6px;
   padding-left: 25px;
   position: relative;
 }
@@ -292,7 +292,7 @@ button .fa {
 label {
   cursor: pointer;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
   /** Header **/
   .site-title {
     text-align: center;

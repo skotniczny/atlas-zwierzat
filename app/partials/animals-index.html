@@ -1,0 +1,30 @@
+<header class="site-header">
+  <h1 class="site-title"><a href="#/">Atlas Zwierząt Polski</a></h1>
+
+  <nav class="page-nav">
+    <ul class="inline-items">
+      <li class="menu-item"><a href="#/">główna</a></li>
+      <li class="menu-item"><a href="#/classes">gromady</a></li>
+      <li class="menu-item active"><a href="#/site-index">skorowidz</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="site-index" ng-controller="ScrollController">
+  <h2>Skorowidz</h2>
+
+  <ul class="inline-items" index-menu>
+  </ul>
+
+  <dl ng-repeat="(key, value) in pageIndex">
+    <dt id="{{key}}">
+      {{key}}
+    </dt>
+    <dd ng-repeat="animal in value | orderBy:'name'">
+      <a href="#/animals/{{animal.id}}">{{animal.name}}</a>
+    </dd>      
+  </dl>
+
+  <ul class="inline-items" index-menu>
+  </ul>
+</section>
