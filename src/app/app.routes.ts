@@ -12,8 +12,13 @@ export const routes: Routes = [
     path: 'animals/:animalId',
     component: AnimalDetail
   },
+  {
+    path: 'site-index',
+    component: AnimalsIndex,
+    title: 'Skorowidz | Atlas Zwierząt Polski'
   },
   {
     path: '**',
     redirectTo: ''
   }
+];
