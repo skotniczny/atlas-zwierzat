@@ -7,6 +7,9 @@ body {
 .inner {
   width: 100%;
 }
+.main {
+  display: flow-root;
+}
 section,
 .article,
 .site-title,

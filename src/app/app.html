@@ -1,3 +1,28 @@
 <main class="main">
   <router-outlet />
 </main>
+
+<div class="bottom-nav-container">
+  <ul class="bottom-nav inline-items inner">
+    @for (entry of classEntries(); track entry.name) {
+    <li>
+      <h2>{{entry.name}}</h2>
+      <ul>
+        @for(animal of entry.animals; track animal.id) {
+        <li class="label">
+          <a [routerLink]="['/animals', animal.id]">{{animal.name}}</a>
+        </li>
+        }
+      </ul>
+    </li>
+    }
+  </ul>
+</div>
+<footer class="site-footer">
+  <div class="inner">
+    <ul class="site-info inline-items">
+      <li class="left">&copy; Atlas Zwierząt 2026 <a routerLink="/">Główna</a> · <a routerLink="/classes">Gromady</a> · <a routerLink="/site-index">Skorowidz</a></li> 
+      <li class="right">Angular App: v<span>{{version}}</span></li>
+    </ul>
+  </div>
+</footer>
