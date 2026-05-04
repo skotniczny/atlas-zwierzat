@@ -1,0 +1,53 @@
+<article class="article">
+  @if (animal(); as animal) {
+  <header class="article-header">
+    <h1 class="article-title">
+      <a routerLink="/">{{animal.name}} (<em>{{animal.latinName}}</em>)</a>
+    </h1>
+  </header>
+
+  <div class="short-desc">
+    <dl>
+      <dt>Środowisko życia</dt>
+      <dd>{{animal.habitat}}</dd></dl>
+    <dl>
+      <dt>Sposób odżywiania</dt>
+      <dd>{{animal.food}}</dd></dl>
+    <dl>
+      <dt>Chronotyp</dt>
+      <dd>{{animal.chronotype}}</dd></dl>
+    <dl>
+      <dt>Aktywność roczna</dt> 
+      <dd>{{animal.activity}}</dd></dl>
+    <dl>
+      <dt>Ochrona</dt>
+      <dd>{{animal.conservation || 'nie podlega ochronie'}}</dd>
+    </dl>
+  </div>
+
+  <div class="long-desc">
+    <dl>
+      <dt>Rozwój i rozród</dt>
+      <dd [innerHTML]="animal.development"></dd>
+    </dl>
+  </div>
+
+  <figure>
+    <img src="img/animals/{{animal.img}}" alt="" class="img-thumbnail">
+    <figcaption>
+    {{animal.name}}
+    </figcaption>
+  </figure>
+  <footer class="clearfix">
+    <ul class="inline-items">
+      <li class="left">
+        <i class="fa fa-cc"></i> Artykuł dostępny na <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencji CC BY 4.0</a>.
+      </li>
+      <li class="right">
+        <button (click)="print()"><i class="fa fa-print"></i> Drukuj</button>
+        <button (click)="back()"><i class="fa fa-undo"></i> Wstecz</button>
+      </li>
+    </ul>
+  </footer>
+  }
+</article>
