@@ -1,0 +1,34 @@
+<header class="site-header">
+  <h1 class="site-title"><a routerLink="/">Atlas Zwierząt Polski</a></h1>
+  
+  <nav class="page-nav">
+    <ul class="inline-items">
+      <li class="menu-item"><a routerLink="/">główna</a></li>
+      @for (entry of classEntries(); track entry.name) {
+      <li class="menu-item" [class.active]="activeTab() === entry.name">
+        <a (click)="setTab(entry.name)" routerLink="/classes">{{entry.name}}</a>
+      </li>
+      }
+      <li class="menu-item"><a routerLink="/site-index">skorowidz</a></li>
+    </ul>
+  </nav>
+</header>
+
+@for (entry of classEntries(); track entry.name) {
+@if (activeTab() === entry.name) {
+<div class="gallery clearfix">
+  @for (animal of entry.animals; track animal.id) {
+  <dl>
+    <dt>
+      <a [routerLink]="['/animals', animal.id]">
+        <img src="{{animal.img}}" [alt]="animal.name">
+      </a>
+    </dt>
+    <dd>
+      <a [routerLink]="['/animals', animal.id]">{{animal.name}}</a>
+    </dd>
+  </dl>
+  }
+</div>
+}
+}
