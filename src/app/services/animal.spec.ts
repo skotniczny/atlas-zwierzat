@@ -32,7 +32,7 @@ describe('Animal', () => {
       expect(result[0].name).toBe('Wilk szary');
     });
 
-    const req = controller.expectOne('/animals/animals.json');
+    const req = controller.expectOne('animals/animals.json');
     expect(req.request.method).toBe('GET');
     req.flush(mockData);
   });
@@ -54,7 +54,7 @@ describe('Animal', () => {
       expect(result.name).toBe('Wilk szary');
     })
 
-    const req = controller.expectOne('/animals/wilk-szary.json');
+    const req = controller.expectOne('animals/wilk-szary.json');
     expect(req.request.method).toBe('GET');
     req.flush(mockData)
   });
@@ -72,7 +72,7 @@ describe('Animal', () => {
       expect(result["ssaki"][1].id).toBe("lis-pospolity");
     });
 
-    const req = controller.expectOne('/animals/classes.json');
+    const req = controller.expectOne('animals/classes.json');
     expect(req.request.method).toBe('GET');
     req.flush(mockData);
   });
