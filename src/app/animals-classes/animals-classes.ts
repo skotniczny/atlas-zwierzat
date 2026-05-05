@@ -3,10 +3,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
 import { AnimalClasses } from '../models/animal';
 import { AnimalService } from '../services/animal.service';
+import { AnimalCard } from '../animal-card/animal-card';
 
 @Component({
   selector: 'app-animals-classes',
-  imports: [RouterLink],
+  imports: [RouterLink, AnimalCard],
   templateUrl: './animals-classes.html',
   styleUrl: './animals-classes.css',
 })

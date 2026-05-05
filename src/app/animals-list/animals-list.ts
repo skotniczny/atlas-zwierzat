@@ -4,10 +4,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { signal } from '@angular/core';
 import { AnimalsListItem } from '../models/animal';
 import { RouterLink } from '@angular/router';
+import { AnimalCard } from '../animal-card/animal-card';
 
 @Component({
   selector: 'app-animals-list',
-  imports: [RouterLink],
+  imports: [RouterLink, AnimalCard],
   templateUrl: './animals-list.html',
   styleUrl: './animals-list.css',
 })

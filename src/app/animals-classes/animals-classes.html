@@ -18,16 +18,7 @@
 @if (activeTab() === entry.name) {
 <div class="gallery clearfix">
   @for (animal of entry.animals; track animal.id) {
-  <dl>
-    <dt>
-      <a [routerLink]="['/animals', animal.id]">
-        <img src="{{animal.img}}" [alt]="animal.name">
-      </a>
-    </dt>
-    <dd>
-      <a [routerLink]="['/animals', animal.id]">{{animal.name}}</a>
-    </dd>
-  </dl>
+    <app-animal-card [animal]="animal" />
   }
 </div>
 }

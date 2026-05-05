@@ -14,16 +14,7 @@
 </header>
 
 <div class="gallery clearfix">
-@for (animal of filteredAnimals(); track animal.id) {
-<dl>
-  <dt>
-    <a [routerLink]="['/animals', animal.id]">
-      <img src="img/animals/{{animal.img}}" alt="{{animal.name}}">
-    </a>
-  </dt>
-  <dd>
-    <a [routerLink]="['/animals', animal.id]">{{animal.name}}</a>
-  </dd>
-</dl> 
-}
+  @for (animal of filteredAnimals(); track animal.id) {
+    <app-animal-card [animal]="animal" />
+  }
 </div>
