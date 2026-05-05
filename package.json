@@ -1,13 +1,13 @@
 {
-  "name": "modern",
-  "version": "0.0.0",
+  "name": "atlas-zwierzat",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:modern": "node dist/modern/server/server.mjs"
+    "serve:ssr:atlas-zwierzat": "node dist/atlas-zwierzat/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@10.9.2",

@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "modern": {
+    "atlas-zwierzat": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -67,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "modern:build:production"
+              "buildTarget": "atlas-zwierzat:build:production"
             },
             "development": {
-              "buildTarget": "modern:build:development"
+              "buildTarget": "atlas-zwierzat:build:development"
             }
           },
           "defaultConfiguration": "development"
