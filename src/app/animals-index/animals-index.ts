@@ -4,10 +4,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { AnimalsListItem } from '../models/animal';
 import { RouterLink } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { PageNav } from '../page-nav/page-nav';
 
 @Component({
   selector: 'app-animals-index',
-  imports: [RouterLink],
+  imports: [RouterLink, PageNav],
   templateUrl: './animals-index.html',
   styleUrl: './animals-index.css',
 })

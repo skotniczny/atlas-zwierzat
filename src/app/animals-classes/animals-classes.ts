@@ -4,10 +4,11 @@ import { RouterLink } from '@angular/router';
 import { AnimalClasses } from '../models/animal';
 import { AnimalService } from '../services/animal.service';
 import { AnimalCard } from '../animal-card/animal-card';
+import { PageNav } from '../page-nav/page-nav';
 
 @Component({
   selector: 'app-animals-classes',
-  imports: [RouterLink, AnimalCard],
+  imports: [RouterLink, AnimalCard, PageNav],
   templateUrl: './animals-classes.html',
   styleUrl: './animals-classes.css',
 })

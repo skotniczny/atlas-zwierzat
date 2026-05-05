@@ -1,0 +1,26 @@
+.page-nav {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.page-nav .inline-items li {
+  display: block;
+}
+@media screen and (min-width: 599px) {
+  .page-nav {
+    margin: 0 4%;
+    position: relative;
+  }
+  .page-nav ul {
+    margin: 0;
+    display: flex;
+  }
+}
+@media screen and (min-width: 960px) {
+  .page-nav {
+    margin: 0;
+  }
+  .page-nav ul {
+    margin: 0 4%;
+  }
+}

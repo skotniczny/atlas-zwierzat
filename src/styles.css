@@ -68,14 +68,6 @@ a:focus {
   background-color: #79bd9a;
   color: #fff;
 }
-.page-nav {
-  border-color: #ddd;
-  border-style: solid;
-  border-width: 1px 0;
-}
-.page-nav .inline-items li {
-  display: block;
-}
 .search {
   box-sizing: border-box;
   max-width: 290px;
@@ -159,15 +151,6 @@ label {
   .article-title em {
     white-space: nowrap;
   }
-  /** Navigation **/
-  .page-nav {
-    margin: 0 4%;
-    position: relative;
-  }
-  .page-nav ul {
-    margin: 0;
-    display: flex;
-  }
   .search {
     margin-left: auto;
     padding-left: 0;
@@ -187,16 +170,6 @@ label {
   .inner {
     margin: 0 auto;
     max-width: 1020px;
-  }
-  /** Navigation **/
-  .page-nav {
-    margin: 0;
-  }
-  .page-nav ul {
-    margin: 0 4%;
-  }
-  .search {
-    margin-top: 8px;
   }
   /** Gallery **/
   .gallery {

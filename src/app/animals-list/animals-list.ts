@@ -5,10 +5,11 @@ import { signal } from '@angular/core';
 import { AnimalsListItem } from '../models/animal';
 import { RouterLink } from '@angular/router';
 import { AnimalCard } from '../animal-card/animal-card';
+import { PageNav } from '../page-nav/page-nav';
 
 @Component({
   selector: 'app-animals-list',
-  imports: [RouterLink, AnimalCard],
+  imports: [RouterLink, AnimalCard, PageNav],
   templateUrl: './animals-list.html',
   styleUrl: './animals-list.css',
 })
