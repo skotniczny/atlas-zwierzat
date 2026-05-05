@@ -1,3 +1,75 @@
 :host {
   display: contents;
 }
+dl {
+  height: 208px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+dt {
+  background: #0d0d0d;
+  height: 100%;
+  width: 100%;
+}
+dt img {
+  width: 100%;
+}
+dl dd {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+}
+dl dd a {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-variant: small-caps;
+  padding: 15px 25px;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+}
+dl dt a:focus {
+  opacity: 0.85;
+  outline: none;
+}
+dl dd a:focus {
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2) inset;
+  opacity: 1;
+}
+@media screen and (min-width: 599px) {
+  dl {
+    border-radius: 3px;
+  }
+}
+@media screen and (min-width: 960px) {
+  dl dd a {
+    opacity: 0;
+  }
+  dl:hover dd a {
+    opacity: 1;
+  }
+}
+/** Print Style **/
+@media print {
+  dl {
+    height: auto;
+    width: 100%;
+  }
+  dl dt {
+    margin: 0 auto;
+    width: 60%;
+  }
+  dl dd {
+    position: static;
+  }
+  dl dd a {
+    opacity: 1;
+  }
+}
