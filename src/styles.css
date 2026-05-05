@@ -98,62 +98,6 @@ a:focus {
 .site-index dt {
   font-size: 1.17em;
 }
-/** Bottom Navigation **/
-.bottom-nav-container {
-  background-color: #0b486b;
-}
-.bottom-nav {
-  color: #fff;
-  margin: 0;
-  padding: 0.5em 0 1em;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-.bottom-nav ul {
-  margin: 1em 0;
-  padding: 0;
-}
-.bottom-nav .label a {
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #3b8686;
-  color: #fff;
-  display: inline-block;
-  margin: 4px 8px;
-  padding: 3px 6px;
-  position: relative;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.bottom-nav .label a::before {
-  border-bottom: 14px solid transparent;
-  border-right: 8px solid #3b8686;
-  border-top: 14px solid transparent;
-  content: "";
-  height: 0;
-  left: -8px;
-  position: absolute;
-  top: 0;
-  width: 0;
-}
-.bottom-nav .label a::after {
-  background-color: #fff;
-  border-radius: 50%;
-  content: "";
-  height: 4px;
-  left: -2px;
-  position: absolute;
-  top: 13px;
-  width: 4px;
-}
-.bottom-nav .label a:hover {
-  background: #79bd9a;
-  color: #fff;
-}
-.bottom-nav .label a:hover::before {
-  border-right-color: #79bd9a;
-}
 /** Footers **/
 footer {
   color: #666;
@@ -261,20 +205,6 @@ label {
   /** Gallery **/
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  /** Bottom Navigation **/
-  .bottom-nav > li {
-    flex: 1 1 0px;
-  }
-  .bottom-nav .label a {
-    font-size: 18px;
-  }
-  .bottom-nav .label a::before {
-    border-bottom: 16px solid transparent;
-    border-top: 16px solid transparent;
-  }
-  .bottom-nav .label a::after {
-    top: 14px;
   }
 }
 /** Print Style **/
