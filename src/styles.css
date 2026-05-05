@@ -94,10 +94,6 @@ a:focus {
   display: grid;
   gap: 4px;
 }
-/** Site Index**/
-.site-index dt {
-  font-size: 1.17em;
-}
 /** Footers **/
 footer {
   color: #666;
