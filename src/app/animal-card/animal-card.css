@@ -13,18 +13,18 @@ dt {
   height: 100%;
   width: 100%;
 }
-dt img {
+img {
   width: 100%;
+  display: block;
 }
-dl dd {
+dd {
   bottom: 0;
   left: 0;
   margin: 0;
   position: absolute;
   width: 100%;
 }
-dl dd a {
-  background-color: #000;
+dd a {
   background-color: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   color: white;
@@ -35,13 +35,13 @@ dl dd a {
   text-transform: capitalize;
   width: 100%;
 }
-dl dt a:focus {
+dt a:focus {
   opacity: 0.85;
-  outline: none;
+  outline-offset: -2px;
 }
-dl dd a:focus {
+dl:has(:focus) dd a {
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2) inset;
-  opacity: 1;
+  outline-offset: -2px;
 }
 @media screen and (min-width: 599px) {
   dl {
@@ -49,27 +49,28 @@ dl dd a:focus {
   }
 }
 @media screen and (min-width: 960px) {
-  dl dd a {
+  dd a {
     opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  dl:has(:focus-visible) dd a,
   dl:hover dd a {
     opacity: 1;
   }
 }
-/** Print Style **/
 @media print {
   dl {
     height: auto;
     width: 100%;
   }
-  dl dt {
+  dt {
     margin: 0 auto;
     width: 60%;
   }
-  dl dd {
+  dd {
     position: static;
   }
-  dl dd a {
+  dd a {
     opacity: 1;
   }
 }
