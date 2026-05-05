@@ -7,9 +7,6 @@ body {
 .inner {
   width: 100%;
 }
-.clearfix {
-  display: flow-root;
-}
 section,
 .article,
 .site-title,
@@ -94,16 +91,15 @@ a:focus {
 /** Main Gallery **/
 .gallery {
   padding: 1em 0;
+  display: grid;
+  gap: 4px;
 }
 .gallery dl {
-  /*display: inline-block;*/
-  float: left;
   height: 208px;
-  margin: .3% 0;
+  margin: 0;
   overflow: hidden;
   padding: 0;
   position: relative;
-  width: 100%;
 }
 .gallery dt {
   background: #0d0d0d;
@@ -190,11 +186,10 @@ a:focus {
 .bottom-nav {
   color: #fff;
   margin: 0;
-  padding: 0 0 1em;
+  padding: 0.5em 0 1em;
   text-align: center;
-}
-.bottom-nav > li {
-  margin-top: .5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 .bottom-nav ul {
   margin: 1em 0;
@@ -254,7 +249,6 @@ footer .left {
   width: 70%;
 }
 footer .right {
-  float: right;
   text-align: right;
   width: 30%;
 }
@@ -313,23 +307,20 @@ label {
   }
   .page-nav ul {
     margin: 0;
-  }
-  .page-nav .inline-items li {
-    display: inline-block;
+    display: flex;
   }
   .search {
-    float: right;
+    margin-left: auto;
     padding-left: 0;
   }
   /** Gallery **/
   .gallery {
     margin-left: 4%;
     margin-right: 4%;
+    grid-template-columns: 1fr 1fr;
   }
   .gallery dl {
     border-radius: 3px;
-    margin: .3%;
-    width: 49.6%;
   }
   .gallery dl:nth-child(even) {
     margin-right: 0;
@@ -362,21 +353,8 @@ label {
     margin-top: 8px;
   }
   /** Gallery **/
-  .gallery dl {
-    margin: .3%;
-    width: 32.9%;
-  }
-  .gallery dl:nth-child(even) {
-    margin-right: .3%;
-  }
-  .gallery dl:nth-child(odd) {
-    margin-left: .3%;
-  }
-  .gallery dl:nth-child(3n+0) {
-    margin-right: 0;
-  }
-  .gallery dl:nth-child(3n+1) {
-    margin-left: 0;
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .gallery dl dd a {
     opacity: 0;
@@ -386,8 +364,7 @@ label {
   }
   /** Bottom Navigation **/
   .bottom-nav > li {
-    vertical-align: top;
-    width: 33%;
+    flex: 1 1 0px;
   }
   .bottom-nav .label a {
     font-size: 18px;
@@ -431,7 +408,6 @@ label {
     text-align: center;
   }
   .gallery dl {
-    float: none;
     height: auto;
     width: 100%;
   }

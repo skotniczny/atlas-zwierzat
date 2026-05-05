@@ -13,7 +13,7 @@
   </nav>
 </header>
 
-<div class="gallery clearfix">
+<div class="gallery">
   @for (animal of filteredAnimals(); track animal.id) {
     <app-animal-card [animal]="animal" />
   }

@@ -16,7 +16,7 @@
 
 @for (entry of classEntries(); track entry.name) {
 @if (activeTab() === entry.name) {
-<div class="gallery clearfix">
+<div class="gallery">
   @for (animal of entry.animals; track animal.id) {
     <app-animal-card [animal]="animal" />
   }
