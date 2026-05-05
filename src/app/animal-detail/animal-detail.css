@@ -1,4 +1,3 @@
-/** Article **/
 .short-desc,
 .long-desc {
   padding: 0 5%;
@@ -35,14 +34,12 @@
   font-style: italic;
 }
 @media screen and (min-width: 599px) {
-  /** Article **/
   .article {
     margin: 0 8%;
   }
 }
-/** Print Style **/
+
 @media print {
-  /** Article **/
   .article dt {
     font-weight: 700;
   }

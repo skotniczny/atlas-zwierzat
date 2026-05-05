@@ -1,4 +1,3 @@
-/** Bottom Navigation **/
 .bottom-nav-container {
   background-color: #0b486b;
 }
@@ -56,7 +55,6 @@
   border-right-color: #79bd9a;
 }
 @media screen and (min-width: 960px) {
-  /** Bottom Navigation **/
   .bottom-nav > li {
     flex: 1 1 0px;
   }
