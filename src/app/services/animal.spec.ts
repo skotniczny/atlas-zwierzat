@@ -17,6 +17,12 @@ describe('Animal', () => {
     });
     service = TestBed.inject(AnimalService);
     controller = TestBed.inject(HttpTestingController);
+    controller.expectOne('animals/classes.json').flush({
+      "ssaki": [
+        {"id":"wilk-szary","name":"Wilk szary","img":"img/animals/wilk_szary.jpg"},
+        {"id":"lis-pospolity","name":"Lis pospolity","img":"img/animals/lis_pospolity.jpg"}
+      ]
+    });
   });
 
   it('should be created', () => {
@@ -59,22 +65,9 @@ describe('Animal', () => {
     req.flush(mockData)
   });
 
-  it('getClasses()', () => {
-    const mockData = {
-      "ssaki": [
-        {"id":"wilk-szary","name":"Wilk szary","img":"img/animals/wilk_szary.jpg"},
-        {"id":"lis-pospolity","name":"Lis pospolity","img":"img/animals/lis_pospolity.jpg"}
-      ]
-    };
-
-    service.getClasses().subscribe((result) => {
-      expect(result["ssaki"][0].id).toBe("wilk-szary");
-      expect(result["ssaki"][1].id).toBe("lis-pospolity");
-    });
-
-    const req = controller.expectOne('animals/classes.json');
-    expect(req.request.method).toBe('GET');
-    req.flush(mockData);
+  it('classEntries signal', () => {
+    expect(service.classEntries()[0].name).toBe('ssaki');
+    expect(service.classEntries()[0].animals[0].id).toBe('wilk-szary');
   });
 
   afterEach(() => {

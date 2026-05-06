@@ -1,7 +1,5 @@
-import { Component, computed, inject, signal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { AnimalClasses } from '../models/animal';
 import { AnimalService } from '../services/animal.service';
 import { AnimalCard } from '../animal-card/animal-card';
 import { PageNav } from '../page-nav/page-nav';
@@ -14,8 +12,7 @@ import { PageNav } from '../page-nav/page-nav';
 })
 export class AnimalsClasses {
   service = inject(AnimalService);
-  classes = toSignal(this.service.getClasses(), { initialValue: {} as AnimalClasses });
-  classEntries = computed(() => Object.entries(this.classes()).map(([name, animals]) => ({ name, animals })));
+  classEntries = this.service.classEntries;
 
   activeTab = signal('owady');
 
