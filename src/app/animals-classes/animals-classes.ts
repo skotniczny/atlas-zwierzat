@@ -2,11 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AnimalService } from '../services/animal.service';
 import { AnimalCard } from '../animal-card/animal-card';
-import { PageNav } from '../page-nav/page-nav';
+import { SiteHeader } from '../site-header/site-header';
 
 @Component({
   selector: 'app-animals-classes',
-  imports: [RouterLink, AnimalCard, PageNav],
+  imports: [RouterLink, AnimalCard, SiteHeader],
   templateUrl: './animals-classes.html',
   styleUrl: './animals-classes.css',
 })

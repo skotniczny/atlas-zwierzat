@@ -3,13 +3,12 @@ import { AnimalService } from '../services/animal.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { signal } from '@angular/core';
 import { AnimalsListItem } from '../models/animal';
-import { RouterLink } from '@angular/router';
 import { AnimalCard } from '../animal-card/animal-card';
-import { PageNav } from '../page-nav/page-nav';
+import { SiteHeader } from '../site-header/site-header';
 
 @Component({
   selector: 'app-animals-list',
-  imports: [RouterLink, AnimalCard, PageNav],
+  imports: [AnimalCard, SiteHeader],
   templateUrl: './animals-list.html',
   styleUrl: './animals-list.css',
 })

@@ -1,8 +1,8 @@
-<app-page-nav>
+<app-site-header>
   <li slot="search" class="search">
     <input #s id="s" type="search" placeholder="Wyszukaj" [value]="query()" (input)="query.set(s.value)"> <label for="s"><span class="sr-only">Wyszukaj zwierzę</span><i class="fa fa-search"></i></label>
   </li>
-</app-page-nav>
+</app-site-header>
 
 <div class="gallery">
   @for (animal of filteredAnimals(); track animal.id) {

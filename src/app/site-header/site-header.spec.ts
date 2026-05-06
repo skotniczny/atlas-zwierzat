@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PageNav } from './page-nav';
+import { SiteHeader } from './site-header';
 import { provideRouter } from '@angular/router';
 
-describe('PageNav', () => {
-  let component: PageNav;
-  let fixture: ComponentFixture<PageNav>;
+describe('SiteHeader', () => {
+  let component: SiteHeader;
+  let fixture: ComponentFixture<SiteHeader>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageNav],
+      imports: [SiteHeader],
       providers: [provideRouter([])],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PageNav);
+    fixture = TestBed.createComponent(SiteHeader);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

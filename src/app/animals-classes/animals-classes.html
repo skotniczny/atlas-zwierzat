@@ -1,4 +1,4 @@
-<app-page-nav>
+<app-site-header>
   <ng-container slot="tabs">
     @for (entry of classEntries(); track entry.name) {
     <li class="menu-item" [class.active]="activeTab() === entry.name">
@@ -6,7 +6,7 @@
     </li>
     }
   </ng-container>
-</app-page-nav>
+</app-site-header>
 
 @for (entry of classEntries(); track entry.name) {
 @if (activeTab() === entry.name) {
