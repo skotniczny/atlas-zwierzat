@@ -2,7 +2,7 @@
   <h1 class="site-title"><a routerLink="/">Atlas Zwierząt Polski</a></h1>
   <app-page-nav>
     <li slot="search" class="search">
-      <input #s id="s" type="search" placeholder="Wyszukaj" [value]="query()" (input)="query.set(s.value)"> <label for="s"><i class="fa fa-search"></i></label>
+      <input #s id="s" type="search" placeholder="Wyszukaj" [value]="query()" (input)="query.set(s.value)"> <label for="s"><span class="sr-only">Wyszukaj zwierzę</span><i class="fa fa-search"></i></label>
     </li>
   </app-page-nav>
 </header>
