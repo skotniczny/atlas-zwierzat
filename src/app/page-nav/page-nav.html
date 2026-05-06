@@ -1,10 +1,13 @@
-<nav class="page-nav">
-  <ul class="inline-items">
-    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">główna</a></li>
-    <ng-content select="[slot=tabs]">
-      <li class="menu-item" routerLinkActive="active"><a routerLink="/classes">gromady</a></li>
-    </ng-content>
-    <li class="menu-item" routerLinkActive="active"><a routerLink="/site-index">skorowidz</a></li>
-    <ng-content select="[slot=search]" />
-  </ul>
-</nav>
+<header class="site-header">
+  <h1 class="site-title"><a routerLink="/">Atlas Zwierząt Polski</a></h1>
+  <nav class="page-nav">
+    <ul class="inline-items">
+      <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">główna</a></li>
+      <ng-content select="[slot=tabs]">
+        <li class="menu-item" routerLinkActive="active"><a routerLink="/classes">gromady</a></li>
+      </ng-content>
+      <li class="menu-item" routerLinkActive="active"><a routerLink="/site-index">skorowidz</a></li>
+      <ng-content select="[slot=search]" />
+    </ul>
+  </nav>
+</header>

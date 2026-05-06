@@ -1,15 +1,12 @@
-<header class="site-header">
-  <h1 class="site-title"><a routerLink="/">Atlas Zwierząt Polski</a></h1>
-  <app-page-nav>
-    <ng-container slot="tabs">
-      @for (entry of classEntries(); track entry.name) {
-      <li class="menu-item" [class.active]="activeTab() === entry.name">
-        <a (click)="setTab(entry.name)" routerLink="/classes">{{entry.name}}</a>
-      </li>
-      }
-    </ng-container>
-  </app-page-nav>
-</header>
+<app-page-nav>
+  <ng-container slot="tabs">
+    @for (entry of classEntries(); track entry.name) {
+    <li class="menu-item" [class.active]="activeTab() === entry.name">
+      <a (click)="setTab(entry.name)" routerLink="/classes">{{entry.name}}</a>
+    </li>
+    }
+  </ng-container>
+</app-page-nav>
 
 @for (entry of classEntries(); track entry.name) {
 @if (activeTab() === entry.name) {
