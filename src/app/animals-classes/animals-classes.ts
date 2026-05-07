@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AnimalService } from '../services/animal.service';
 import { AnimalCard } from '../animal-card/animal-card';
@@ -9,6 +9,7 @@ import { SiteHeader } from '../site-header/site-header';
   imports: [RouterLink, AnimalCard, SiteHeader],
   templateUrl: './animals-classes.html',
   styleUrl: './animals-classes.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AnimalsClasses {
   service = inject(AnimalService);

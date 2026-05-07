@@ -1,4 +1,4 @@
-import { Component, inject, VERSION } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, VERSION } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { AnimalService } from './services/animal.service';
 
@@ -6,7 +6,8 @@ import { AnimalService } from './services/animal.service';
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
   service = inject(AnimalService);

@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { AnimalService } from '../services/animal.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AnimalsListItem } from '../models/animal';
@@ -11,6 +11,7 @@ import { SiteHeader } from '../site-header/site-header';
   imports: [RouterLink, SiteHeader],
   templateUrl: './animals-index.html',
   styleUrl: './animals-index.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AnimalsIndex {
   service = inject(AnimalService);

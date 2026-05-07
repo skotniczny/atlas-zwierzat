@@ -1,7 +1,6 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { AnimalService } from '../services/animal.service';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { signal } from '@angular/core';
 import { AnimalsListItem } from '../models/animal';
 import { AnimalCard } from '../animal-card/animal-card';
 import { SiteHeader } from '../site-header/site-header';
@@ -11,6 +10,7 @@ import { SiteHeader } from '../site-header/site-header';
   imports: [AnimalCard, SiteHeader],
   templateUrl: './animals-list.html',
   styleUrl: './animals-list.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AnimalsList {
   service = inject(AnimalService);

@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { switchMap, tap } from 'rxjs';
 import { AnimalService } from '../services/animal.service';
 import { toSignal, toObservable } from '@angular/core/rxjs-interop';
@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
   imports: [RouterLink],
   templateUrl: './animal-detail.html',
   styleUrl: './animal-detail.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AnimalDetail {
   animalId = input.required<string>();
