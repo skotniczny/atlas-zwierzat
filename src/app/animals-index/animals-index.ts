@@ -3,7 +3,6 @@ import { AnimalService } from '../services/animal.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AnimalsListItem } from '../models/animal';
 import { RouterLink } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
 import { SiteHeader } from '../site-header/site-header';
 
 @Component({
@@ -28,10 +27,4 @@ export class AnimalsIndex {
         .map(([letter, animals]) => ({letter, animals}))
         .sort((a, b) => a.letter.localeCompare(b.letter));
   });
-
-  scroller = inject(ViewportScroller)
-
-  gotoHash(id: string) {
-    this.scroller.scrollToAnchor(id);
-  }
 }
