@@ -16,15 +16,9 @@ export class AnimalsIndex {
   service = inject(AnimalService);
   animals = toSignal(this.service.getAnimals(), { initialValue: [] as AnimalsListItem[]});
   pageIndex = computed(() => {
-    const index = this.animals()
-      .reduce<Record<string, AnimalsListItem[]>>((acc, animal) => {
-        const letter = animal.name[0];
-        (acc[letter] ??= []).push(animal);
-        return acc;
-      }, {});
-
-      return Object.entries(index)
-        .map(([letter, animals]) => ({letter, animals}))
-        .sort((a, b) => a.letter.localeCompare(b.letter));
+    const index = Object.groupBy(this.animals(), animal => animal.name[0]);
+    return Object.entries(index)
+      .map(([letter, animals]) => ({letter, animals}))
+      .sort((a, b) => a.letter.localeCompare(b.letter));
   });
 }
